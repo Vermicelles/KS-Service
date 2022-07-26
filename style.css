@@ -1,0 +1,515 @@
+@font-face{
+    font-family: 'Land Rover Web';
+    src: url("./10808.ttf");
+}
+button {
+    font-family: inherit;
+}
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+body {
+    background-color: #f6f6f6;
+    color: #989898;
+    font-family: "Land Rover Web";
+    font-size: 13px;
+    min-width: 1300px;
+}
+a {
+    color: #989898;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.top {
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 70px;
+    background-color: #313131;
+    animation-name: top_panel;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+}
+@keyframes top_panel {
+    from {opacity: 0; top: -80px;}
+    to {opacity: 1; top: 0;}
+}
+
+.top a:hover {
+    color: #ffc600;
+}
+#logo01 {
+    position: absolute;
+    z-index: 3;
+    top: 11px;
+    left: 90px;
+}
+@media (max-width: 1200px) {
+    #logo01 {
+        display: none;
+    }
+}
+#logo02 {
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    left: 240px;
+}
+@media (max-width: 1620px) {
+    #logo02 {
+        display: none;
+    }
+}
+.search {
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    width: 200px;
+    height: 30px;
+    display: flex;
+}
+.search:focus-within::before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    right: 3px;
+    top: 1px;
+    width: 220px;
+    height: 30px;
+    background-color: #000;
+    filter: blur(10px);
+}
+#poisk {
+    position: absolute;
+    top: -2px;
+    right: 36px;
+    height: 34px;
+    background-color: #989898;
+    border: 1px solid #313131;
+    padding: 0 10px;
+    border-radius: 3px;
+    outline: none;
+}
+.search a {
+    position: absolute;
+    top: -2px;
+    right: 0;
+}
+.search img {
+    height: 36px;
+    width: 36px;
+    border-radius: 3px;
+}
+@media (max-width: 1330px) {
+    .search {
+        display: none;
+    }
+}
+.main_menu {
+    position: absolute;
+    top: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.main_menu a {
+    margin: 0 20px;
+    font-size: 14px;
+}
+.left_menu {
+    position: fixed;
+    top: 71px;
+    left: 0;
+    z-index: 3;
+    height: 100%;
+    width: 240px;
+    background-color: #313131;
+    display: block;
+    padding: 30px 50px;
+    animation-name: left_panel;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+    transform: translateX(-305px);
+    transition: 1s;
+}
+.left_menu:hover {
+    transform: translateX(0px);
+}
+.left_menu:hover > img {
+    transform: translateX(0px);
+    opacity: 0;
+    transition: 0.5s;
+}
+@keyframes left_panel {
+    from {opacity: 0; left: -300px;}
+    to {opacity: 1; left: -0;}
+  }
+.left_menu > * {
+    margin-bottom: 30px;
+}
+.svernut {
+    position: absolute;
+    top: 0px;
+    left: 340px;
+    opacity: 50%;
+}
+.line {
+    background-color: #989898;
+    border: none;
+    height: 1px;
+}
+.left_menu h1 {
+    text-align: center;
+    color: #989898;
+    font-weight: 100;
+    font-size: 20px;
+}
+.change_loko {
+    width: 100%;
+}
+.teplo {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.teplo > * {
+    margin-right: 15px;
+    padding-bottom: 2px;
+}
+.filters {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.filtr {
+    position: relative;
+    display: block;
+}
+.filtr input {
+    position: relative;
+    font-size: 14px;
+    width: 100%;
+    height: 34px;
+    margin-bottom: 15px;
+    background-color: #989898;
+    border: none;
+    padding: 5px 5px 0 8px;
+    color: #606060;
+    border-radius: 3px;
+    outline: none;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: url("date.png") no-repeat;
+}
+.filtr input:hover {
+background-color: #f6f6f6;
+transition: 0.5s;
+}
+.filtr input:focus-within {
+    background-color: #f6f6f6;
+}
+.filtr:focus-within::before {
+    position: absolute;
+    top: 17px;
+    left: -1px;
+    z-index: -1;
+    content: "";
+    width: 255px;
+    height: 41px;
+    background-color: black;
+    filter: blur(20px);
+    opacity: 60%;
+}
+.btn_conteiner {
+    width: 100%;
+    height: 2px;
+    display: flex;
+    justify-content: center;
+}
+.btn_search_loko {
+    position: relative;
+    font-size: 14px;
+    height: 67px;
+    width: 108px;
+    background-color: #313131;
+    color: #989898;
+    padding-bottom: 3px;
+    border: none;
+    border-radius: 2px;
+}
+.btn_search_loko::before {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    z-index: -1;
+    border-radius: 3px;
+    content: "";
+    height: 70px;
+    width: 111px;
+    background-color: #313131;
+    border: 2px solid #ffc600;
+}
+.btn_search_loko:active {
+    border: none;
+    color: #313131;
+    background-color: #ffc600;
+}
+.btn_search_loko:hover::before {
+    background-color: #ffc600;
+    transition: 0.3s;
+    filter: blur(8px);
+}
+#lb {
+position: absolute;
+top: 70px;
+left: 0;
+font-size: 20px;
+}
+.border_ticket {
+    position: absolute;
+    top: 71px;
+    left: 554px;
+    width: 827px;
+    height: 100%;
+    display: block;
+}
+@media (max-width: 1400px){
+    .border_ticket {
+        left: 354px;
+    }
+}
+@media (max-width: 1200px) {
+    .border_ticket {
+        left: 74px;
+        overflow: hidden;
+    }
+}
+.filter_ticket {
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 14px;
+    animation-name: f_ticket;
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+    animation-fill-mode: backwards;
+}
+@keyframes f_ticket {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.ticket {
+    position: relative;
+    width: 825px;
+    height: 130px;
+    margin-bottom: 30px;
+    animation-name: ticket_anim;
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-delay: calc(1s + var(--i));
+    overflow-y: hidden;
+    animation-delay: 0.3s;
+}
+@keyframes ticket_anim {
+    from {top: 300px; opacity: 0;}
+    to {top: 0; opacity: 1;}
+}
+.ticket #table_02 {
+    opacity: 0;
+}
+.line_bold {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 650px;
+    height: 9px;
+    background: linear-gradient(90deg, #e1e1e1, #ebebeb);
+}
+.ticket:hover {
+    height: 230px;
+    transition: 0.3s;
+    overflow: visible;
+}
+.ticket:hover #table_02 {
+    opacity: 1;
+    transition: 0.3s;
+    transition-delay: 0.3s;
+}
+.ticket:hover #set {
+    opacity: 0.5;
+    transition: 0.3s;
+    transition-delay: 0.3s;
+}
+.ticket:hover .line_bold {
+    opacity: 0;
+    transition: 0.3s;
+}
+.ticket #number_zn {
+    position: absolute;
+    top: -9px;
+    left: -70px;
+    font-size: 20px;
+    color: #313131;
+    letter-spacing: -1px;
+}
+#tk_img {
+    position: absolute;
+    top: -1px;
+    left: 0;
+}
+.ticket h1 {
+    position: absolute;
+    z-index: 2;
+    top: 42px;
+    left: 32px;
+    font-size: 48px;
+    color: #c20202;
+    letter-spacing: -2px;
+}
+.ticket h2 {
+    position: absolute;
+    z-index: 2;
+    top: 22px;
+    left: 32px;
+    font-size: 28px;
+    color: #606060;
+}
+.ticket p {
+    position: absolute;
+    left: 32px;
+    top: 166px;
+    font-size: 16px;
+    line-height: 16px;
+}
+#table_01 {
+    position: absolute;
+    z-index: 2;
+    top: 22px;
+    left: 260px;
+}
+#table_02 {
+    position: absolute;
+    z-index: 2;
+    bottom: 30px;
+    left: 260px;
+}
+.ticket table td:nth-child(2){
+color: #313131;
+padding-left: 30px;
+}
+.right_status {
+    position: absolute;
+    top: -1px;
+    right: 0px;
+    z-index: 3;
+    width: 171px;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    background-color: #ebebeb;
+}
+.right_status > * {
+    font-size: 20px;
+    letter-spacing: -0,5px;
+}
+.right_status h4 {
+    color: #ff6400;
+}
+#complete {
+    color: green;
+}
+#neplan {
+    color: #c20202;
+}
+#set {
+    position: absolute;
+    bottom: 30px;
+    right: 210px;
+    z-index: 2;
+    border: none;
+    background-color: white;
+    opacity: 0;
+}
+#set img {
+    width: 20px;
+    height: 20px;
+}
+.ticket:hover #set:hover {
+    opacity: 100%;
+    cursor: pointer;
+}
+.poryadok {
+    display: flex;
+    align-items: center;
+}
+.poryadok p {
+    padding-bottom: 3px;
+    margin-right: 10px;
+    color: #313131;
+}
+#por_btn {
+    background-color: #f6f6f6;
+    border: none;
+    padding: 5px 20px 7px 20px;
+    color: #989898;
+}
+#por_btn:hover {
+    background-color: #ffc600;
+    color: #313131;
+}
+.pages {
+    display: flex;
+    align-items: center;
+}
+#pg_btn {
+    background-color: #f6f6f6;
+    border: none;
+    padding: 5px 10px 7px 10px;
+    color: #989898;
+}
+#pg_btn:hover {
+    background-color: #ffc600;
+    color: #313131;
+}
+#btn_zn {
+    position: absolute;
+    top: 90px;
+    right: 0;
+    border: 1px solid #989898;
+    font-size: 14px;
+    height: 67px;
+    width: 165px;
+    background-color: #f6f6f6;
+    color: #313131;
+    border-radius: 3px;
+    padding-bottom: 5px;
+}
+#btn_zn::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 65px;
+    width: 163px;
+    content: "";
+    background-color: #313131;
+    border-radius: 2px;
+}
+#btn_zn a {
+    white-space: normal;
+}
+#btn_zn:active {
+    background-color: #313131;
+    color: #f6f6f6;
+    border: none;
+}
+#btn_zn:hover::before {
+    transition: 0.3s;
+    filter: blur(5px);
+}

@@ -1,0 +1,519 @@
+@font-face{
+    font-family: 'Land Rover Web';
+    src: url("./10808.ttf");
+}
+button {
+    font-family: inherit;
+}
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+body {
+    background-color: #f6f6f6;
+    color: #989898;
+    font-family: "Land Rover Web";
+    font-size: 13px;
+    min-width: 806px;
+}
+a {
+    color: #989898;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.top {
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    width: 100%;
+    height: 70px;
+    background-color: #313131;
+}
+.top a:hover {
+    color: #ffc600;
+}
+#logo01 {
+    position: absolute;
+    z-index: 3;
+    top: 11px;
+    left: 90px;
+}
+@media (max-width: 1200px) {
+    #logo01 {
+        display: none;
+    }
+}
+#logo02 {
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    left: 240px;
+}
+@media (max-width: 1620px) {
+    #logo02 {
+        display: none;
+    }
+}
+.search {
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    width: 200px;
+    height: 30px;
+    display: flex;
+}
+.search:focus-within::before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    right: 3px;
+    top: 1px;
+    width: 220px;
+    height: 30px;
+    background-color: #000;
+    filter: blur(10px);
+}
+#poisk {
+    position: absolute;
+    top: -2px;
+    right: 36px;
+    height: 34px;
+    background-color: #989898;
+    border: 1px solid #313131;
+    padding: 0 10px;
+    border-radius: 3px;
+    outline: none;
+}
+.search a {
+    position: absolute;
+    top: -2px;
+    right: 0;
+}
+.search img {
+    height: 36px;
+    width: 36px;
+    border-radius: 3px;
+}
+@media (max-width: 1330px) {
+    .search {
+        display: none;
+    }
+}
+.main_menu {
+    position: absolute;
+    top: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.main_menu a {
+    margin: 0 20px;
+    font-size: 14px;
+}
+.main_menu h6 a {
+    color: #f6f6f6;
+    cursor: default;
+}
+.left_menu {
+    position: fixed;
+    top: 71px;
+    left: 0;
+    z-index: 4;
+    height: 100%;
+    width: 240px;
+    background-color: #313131;
+    display: block;
+    padding: 30px 50px;
+    transform: translateX(-305px);
+    transition: 1s;
+}
+.left_menu:hover {
+    transform: translateX(0px);
+}
+.left_menu:hover > img {
+    transform: translateX(0px);
+    opacity: 0;
+    transition: 0.5s;
+}
+.left_menu > * {
+    margin-bottom: 30px;
+}
+.svernut {
+    position: absolute;
+    top: 0px;
+    left: 340px;
+    opacity: 50%;
+}
+.line {
+    background-color: #989898;
+    border: none;
+    height: 1px;
+}
+.left_menu h1 {
+    text-align: center;
+    color: #989898;
+    font-weight: 100;
+    font-size: 20px;
+}
+.change_loko {
+    width: 100%;
+}
+.teplo {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.teplo > * {
+    margin-right: 15px;
+    padding-bottom: 2px;
+}
+.filters {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.filtr {
+    position: relative;
+    display: block;
+}
+.filtr input {
+    position: relative;
+    font-size: 14px;
+    width: 100%;
+    height: 34px;
+    margin-bottom: 15px;
+    background-color: #989898;
+    border: none;
+    padding: 5px 5px 0 8px;
+    color: #606060;
+    border-radius: 3px;
+    outline: none;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: url("date.png") no-repeat;
+}
+.filtr input:hover {
+background-color: #f6f6f6;
+transition: 0.5s;
+}
+.filtr input:focus-within {
+    background-color: #f6f6f6;
+}
+.filtr:focus-within::before {
+    position: absolute;
+    top: 17px;
+    left: -1px;
+    z-index: -1;
+    content: "";
+    width: 255px;
+    height: 41px;
+    background-color: black;
+    filter: blur(20px);
+    opacity: 60%;
+}
+.btn_conteiner {
+    width: 100%;
+    height: 2px;
+    display: flex;
+    justify-content: center;
+}
+.btn_search_loko {
+    position: relative;
+    font-size: 14px;
+    height: 67px;
+    width: 108px;
+    background-color: #313131;
+    color: #989898;
+    padding-bottom: 3px;
+    border: none;
+    border-radius: 2px;
+}
+.btn_search_loko::before {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    z-index: -1;
+    border-radius: 3px;
+    content: "";
+    height: 70px;
+    width: 111px;
+    background-color: #313131;
+    border: 2px solid #ffc600;
+}
+.btn_search_loko:active {
+    border: none;
+    color: #313131;
+    background-color: #ffc600;
+}
+.btn_search_loko:hover::before {
+    background-color: #ffc600;
+    transition: 0.3s;
+    filter: blur(8px);
+}
+#lb {
+position: absolute;
+top: 70px;
+left: 10pxtime;
+font-size: 20px;
+}
+.border_ticket {
+    position: relative;
+    top: 71px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 760px;
+    display: block;
+    height: 1500px;
+}
+.filter_ticket {
+    height: 200px;
+    width: 730px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 14px;
+    margin-left: 10px;
+}
+.ticket_flex {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.ticket {
+    position: relative;
+    width: 230px;
+    height: 130px;
+    margin: 0 10px 30px 10px;
+    animation-name: ticket_anim;
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-delay: 0.5s;
+}
+@keyframes ticket_anim {
+    from {top: 100px; opacity: 0;}
+    to {top: 0; opacity: 1;}
+}
+
+.ticket:hover {
+    overflow: visible;
+    z-index: 3;
+}
+#tk_img_01 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.back {
+    position: absolute;
+    top: 130px;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height:0px;
+    background-color: white;
+    pointer-events: none;
+}
+.ticket:hover .back {
+    height: 320px;
+    transition: 0.3s;
+}
+.line_tk {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    height: 1px;
+    background-color: #eaeaea;
+    opacity: 0;
+}
+.ticket:hover .line_tk {
+    opacity: 1;
+    transition: 0.2s;
+    transition-delay: 0.3s;
+}
+.ticket h1 {
+    position: absolute;
+    z-index: 2;
+    top: 36px;
+    left: 32px;
+    font-size: 36px;
+    color: #c20202;
+    letter-spacing: -2px;
+}
+.ticket h2 {
+    position: absolute;
+    z-index: 2;
+    top: 18px;
+    left: 32px;
+    font-size: 24px;
+    color: #606060;
+}
+.ticket:hover h1 {
+    top: 42px;
+    font-size: 48px;
+    transition: 0.3s;
+    transition-delay: 0.2s;
+}
+.ticket:hover h2 {
+    top: 22px;
+    font-size: 28px;
+    transition: 0.3s;
+    transition-delay: 0.2s;
+}
+.ticket .time {
+    position: absolute;
+    display: flex;
+    left: 32px;
+    top: 100px;
+    font-size: 12px;
+    line-height: 12px;
+}
+.ticket .time #numNar {
+    color: #000;
+}
+.time p {
+    margin-right: 10px;
+}
+.ticket:hover .time {
+    display: block;
+    left: 32px;
+    top: 150px;
+    font-size: 16px;
+    line-height: 16px;
+    transition: 0.3s;
+    transition-delay: 0.2s;
+}
+.ticket table {
+    opacity: 0;
+}
+.ticket:hover table {
+    opacity: 1;
+    transition: 0.2s;
+    transition-delay: 0.3s;
+}
+#table_01 {
+    position: absolute;
+    z-index: 2;
+    top: 80px;
+    left: 32px;
+}
+#table_02 {
+    position: absolute;
+    z-index: 2;
+    top: 180px;
+    left: 32px;
+}
+.ticket table td:nth-child(2) {
+    color: #313131;
+    padding-left: 20px;
+    line-height: 1px;
+}
+.status_color {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+    z-index: 1;
+    background-color: #313131;
+    opacity: 70%;
+    display: flex;
+    align-items: center;
+    opacity: 0;   
+}
+.ticket:hover .status_color {
+    opacity: 1;
+    transition: 0.2s;
+    transition-delay: 0.3s;
+}
+.ticket h3 {
+    margin: auto;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    padding-bottom: 2px;
+}
+#pen {
+    position: absolute;
+    top: 90px;
+    left: 190px;
+    opacity: 0;
+}
+.ticket:hover #pen {
+    opacity: 30%;
+}
+.ticket:hover #pen:hover {
+    opacity: 1;
+}
+#pen img {
+    height: 20px;
+    width: 20px;
+}
+.poryadok {
+    display: flex;
+    align-items: center;
+}
+.poryadok p {
+    padding-bottom: 3px;
+    margin-right: 10px;
+    color: #313131;
+}
+#por_btn {
+    background-color: #f6f6f6;
+    border: none;
+    padding: 5px 20px 7px 20px;
+    color: #989898;
+}
+#por_btn:hover {
+    background-color: #ffc600;
+    color: #313131;
+}
+.pages {
+    display: flex;
+    align-items: center;
+}
+#pg_btn {
+    background-color: #f6f6f6;
+    border: none;
+    padding: 5px 10px 7px 10px;
+    color: #989898;
+}
+#pg_btn:hover {
+    background-color: #ffc600;
+    color: #313131;
+}
+#btn_zn {
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    border: 1px solid #989898;
+    font-size: 14px;
+    height: 67px;
+    width: 165px;
+    background-color: #f6f6f6;
+    color: #313131;
+    border-radius: 3px;
+    padding-bottom: 5px;
+}
+#btn_zn::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 65px;
+    width: 163px;
+    content: "";
+    background-color: #313131;
+    border-radius: 2px;
+}
+#btn_zn a {
+    white-space: normal;
+}
+#btn_zn:active {
+    background-color: #313131;
+    color: #f6f6f6;
+    border: none;
+}
+#btn_zn:hover::before {
+    transition: 0.3s;
+    filter: blur(5px);
+}

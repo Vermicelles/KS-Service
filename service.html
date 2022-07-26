@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Сервис</title>
+    <link rel="stylesheet" href="style_01.css">
+</head>
+<body>
+    <div class="top">
+        <a id="logo01" href="index.html"><img src="Logo_01.png" alt="logo"></a>
+        <a id="logo02" href="index.html"><img src="Logo_02.png" alt="logo"></a>
+        <div class="main_menu">
+            <a href="sit_centr.html">Ситуационный центр</a>
+            <a href="disp.html">Диспетчерский центр</a>
+            <h6><a href="service.html">Сервис</a></h6>
+            <a href="diag.html">Диагностика</a>
+            <a href="tmc.html">Учет ТМЦ</a>
+            <a href="otchety.html">Отчеты</a>
+        </div>
+        <div class="search">
+            <input type="text" id="poisk" placeholder="Искать">
+            <a href=""><img src="lupa.png" alt="lupa"></a>
+        </div>
+    </div>
+    <div class="left_menu">
+        <img class="svernut" src="Свернуть.png" alt="нету">
+        <h1>Сервис</h1>
+        <div class="line"></div>
+        <div class="change_loko">
+            <div class="teplo">
+                <input type="checkbox" id="teplovoz">
+                <label for="teplovoz">тепловозы</label>
+            </div>
+            <div class="teplo">
+                <input type="checkbox" id="elektrovoz">
+                <label for="elektrovoz">электровозы</label>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="filters">
+            <div class="filtr">
+                <label for="series">серия</label>
+                <input type="text" id="series" placeholder="Все">
+            </div>
+            <div class="filtr">
+                <label for="number">номер</label>
+                <input type="text" id="number" placeholder="Все">
+            </div>
+            <div class="filtr">
+                <label for="ot">от</label>
+                <input type="date" id="ot">
+            </div>
+            <div class="filtr">
+                <label for="do">до</label>
+                <input type="date" id="do">
+            </div>
+            <div class="filtr">
+                <label for="status">статус</label>
+                <input type="text" id="status" placeholder="Все">
+            </div>
+        </div>
+        <div class="btn_conteiner">
+            <button class="btn_search_loko">Поиск</button>
+        </div>
+    </div>
+    <div class="border_ticket">
+        <div class="filter_ticket">
+            <h1 id="lb">Заказ-Наряды</h1>
+            <button id="btn_zn">создать<br>Заказ-наряд</button>
+            <div class="poryadok">
+                <p>упорядочить:</p>
+                <button id="por_btn">номер тепловоза</button>
+                <button id="por_btn">номер з/н</button>
+                <button id="por_btn">дата з/н</button>
+            </div>
+            <div class="pages">
+                <button id="pg_btn"><</button>
+                <button id="pg_btn">1</button>
+                <button id="pg_btn">2</button>
+                <button id="pg_btn">3</button>
+                <button id="pg_btn">4</button>
+                <button id="pg_btn">></button>
+            </div>
+        </div>
+        <div class="ticket_flex">
+
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
